@@ -1,6 +1,4 @@
-import pandas as pd
-import numpy as np
-import globals
+from globals import *
 import glob
 
 JOB_END_INDEX = 1;
@@ -10,7 +8,7 @@ workload = np.zeros(shape=(360+1))
 path = globals.PATH_WIN
 
 for fname in sorted(glob.glob(path)):
-    # print fname;
+    print fname;
     data = pd.read_csv(fname, header=None);
 
     # job_end = data.loc[JOB_END_INDEX];
